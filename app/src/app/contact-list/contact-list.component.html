@@ -1,0 +1,26 @@
+
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="formContainer">
+          <div class="row align-items-center">
+            <app-sort-contact (contactListUpdate)="fetchUpdatedList()"></app-sort-contact>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="mainContainer">
+  
+            <app-contact
+  
+              *ngFor="let contact of contactList; let i = index"
+              [contact]="contact"
+              [index] = "i"
+              >
+            </app-contact>
+  
+  
+      </div>
+    </div>
+  </div>
